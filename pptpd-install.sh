@@ -17,7 +17,11 @@ service pptpd restart
 echo "Getting Public IP address, Please wait a moment..."
 
 # Get Public IP address
+<<<<<<< HEAD
 IP=$(wget -O - http://ipv4.icanhazip.com/ -o /dev/null)
+=======
+IP=$(wget -O - http://icanhazip.com/ -o /dev/null)
+>>>>>>> origin/master
 if [[ "$IP" = "" ]]; then
     IP=$(wget -O - http://ipinfo.io -o /dev/null | grep "ip" | awk -F\" '{print $4}')
 fi
